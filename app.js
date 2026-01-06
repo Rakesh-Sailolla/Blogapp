@@ -27,7 +27,6 @@ const flash = require("connect-flash");
 const passport=require('passport')
 const localstrategy=require('passport-local')
 const User=require('./models/user.js');
-const user = require('./models/user.js');
 
 
 app.set("view engine", "ejs");
@@ -100,7 +99,8 @@ app.use((req, res, next) => {
 });
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
-    req.session.redirectUrl=req.orginalUrl
+    req.session.redirectUrl = req.originalUrl;
+
     return next();
   }
   req.flash("error", "You must be logged in to perform this action!");
