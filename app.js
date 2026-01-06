@@ -133,7 +133,6 @@ async function isAuthor(req, res, next) {
   next(); // ✅ User is the author — allow access
 }
 
-const Post = require("./models/post"); // make sure this exists
 
 app.get("/", async (req, res) => {
   try {
