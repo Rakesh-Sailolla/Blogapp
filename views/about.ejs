@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar-brand {
+      font-weight: 700;
+      color: #007bff !important;
+    }
+
+    
+
+    /* Content styling */
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #00796b;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .signature {
+      text-align: right;
+      font-weight: bold;
+      color: #00796b;
+      margin-top: 40px;
+      font-size: 1rem;
+    }
+     .navbar-brand {
+      font-weight: 700;
+      color: #007bff !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+   <%- include("includes/navbar.ejs") %>
+
+  <!-- <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/posts">Blog App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/posts">All Posts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/posts/new">Create Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/signup">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- About content -->
+  <div class="container">
+    <h1>About Us</h1>
+    <p>
+      Welcome to our Blog App! Our mission is to create a space where people can freely share their ideas, experiences, and stories.
+      We believe in building a vibrant community of writers and readers who inspire each other.
+    </p>
+    <p>
+      Our platform supports all kinds of blogs – from personal journals and tech articles to lifestyle tips and creative storytelling.
+      Every post is valued, and every author has a voice.
+    </p>
+    <p>
+      We aim to make blogging simple, interactive, and engaging. Whether you are here to write, read, or connect, 
+      you’ll find a welcoming environment for creativity and learning.
+    </p>
+    <div class="signature">Rakesh Sailolla</div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
