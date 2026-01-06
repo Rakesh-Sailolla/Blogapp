@@ -141,9 +141,10 @@ app.get("/about", (req, res) => {
 
 
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+app.get("/", (req, res) => {
+  res.render("index"); // views/index.ejs
+});
+
 ///
 app.get("/signup",isLoggedOut,(req,res)=>{
   res.render("signup.ejs")
