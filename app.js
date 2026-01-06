@@ -133,6 +133,18 @@ async function isAuthor(req, res, next) {
   next(); // ✅ User is the author — allow access
 }
 
+const Post = require("./models/post"); // make sure this exists
+
+app.get("/", async (req, res) => {
+  try {
+    const posts = await Post.find();
+    res.render("index", { posts });
+  } catch (err) {
+    console.error(err);
+    res.render("index", { posts: [] });
+  }
+});
+
 app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
@@ -141,10 +153,7 @@ app.get("/about", (req, res) => {
 
 
 
-app.get("/", async (req, res) => {
-  const posts = await Post.find(); // or []
-  res.render("index", { posts });
-});
+
 
 ///
 app.get("/signup",isLoggedOut,(req,res)=>{
