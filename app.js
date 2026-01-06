@@ -141,8 +141,9 @@ app.get("/about", (req, res) => {
 
 
 
-app.get("/", (req, res) => {
-  res.render("index"); // views/index.ejs
+app.get("/", async (req, res) => {
+  const posts = await Post.find(); // or []
+  res.render("index", { posts });
 });
 
 ///
